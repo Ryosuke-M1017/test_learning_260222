@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スプレッドシート最強ショートカット20選 - 究極版</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+        
+        :root {
+            --sheets-green: #0f9d58;
+            --mac-gray: #333;
+            --win-blue: #0078d4;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #1a1a1b;
+        }
+
+        /* キーキャップのデザイン（Style B） */
+        .kbd-container {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        kbd {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            min-width: 38px;
+            height: 38px;
+            box-shadow: 0 3px 0 #9ca3af;
+            color: #111827;
+            position: relative;
+            top: -2px;
+        }
+
+        .kbd-win {
+            font-size: 0.65rem;
+            color: #6b7280;
+            background: #f9fafb;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px dashed #d1d5db;
+            margin-top: 4px;
+            display: block;
+            width: fit-content;
+        }
+
+        /* カテゴリーブロックの装飾 */
+        .category-block {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* カードのデザイン（Style A） */
+        .shortcut-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .shortcut-card:hover {
+            border-color: var(--sheets-green);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .shortcut-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .shortcut-desc {
+            font-size: 0.85rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        .accent-green { border-left: 6px solid #0f9d58; }
+        .accent-blue { border-left: 6px solid #3b82f6; }
+        .accent-orange { border-left: 6px solid #f97316; }
+        .accent-red { border-left: 6px solid #ef4444; }
+        .accent-purple { border-left: 6px solid #8b5cf6; }
+
+        @media (max-width: 640px) {
+            .category-block { padding: 1rem; }
+            kbd { min-width: 32px; height: 32px; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body class="py-10 px-4 md:px-10">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Main Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
+                スプレッドシート <span class="text-green-600">最強ショートカット</span> 20選
+            </h1>
+            <p class="text-gray-500 max-w-2xl mx-auto font-medium">
+                脱・初心者！マウスを卒業して、作業時間を半分にするための厳選ガイド。<br>
+                <span class="text-xs border-b border-gray-300">※ Mac版をメイン表記、( )内はWindows版の操作です。</span>
+            </p>
+        </div>
+
+        <!-- 1. 基本操作 -->
+        <section class="category-block">
+            <h2 class="category-title text-green-700">
+                <i class="fa-solid fa-star"></i> 01. 基本の必須操作
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Copy -->
+                <div class="shortcut-card accent-green">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>C</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + C</span>
+                    <h3 class="shortcut-name">コピー</h3>
+                    <p class="shortcut-desc">選択したセルの内容や数式をクリップボードに記憶します。</p>
+                </div>
+                <!-- Paste -->
+                <div class="shortcut-card accent-green">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>V</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + V</span>
+                    <h3 class="shortcut-name">貼り付け</h3>
+                    <p class="shortcut-desc">コピーした内容を、選択したセルへ流し込みます。</p>
+                </div>
+                <!-- Undo -->
+                <div class="shortcut-card accent-green">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>Z</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + Z</span>
+                    <h3 class="shortcut-name">元に戻す</h3>
+                    <p class="shortcut-desc">操作をミスしても大丈夫。直前の状態へ一歩戻ります。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 移動・選択 -->
+        <section class="category-block">
+            <h2 class="category-title text-blue-700">
+                <i class="fa-solid fa-bolt"></i> 02. 爆速移動と範囲選択
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Jump -->
+                <div class="shortcut-card accent-blue">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>矢印</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + 矢印</span>
+                    <h3 class="shortcut-name">データ端へ移動</h3>
+                    <p class="shortcut-desc">空白セルに当たるまで、データの端っこへ一瞬でジャンプします。</p>
+                </div>
+                <!-- Select All -->
+                <div class="shortcut-card accent-blue">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>Shift</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>矢印</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + Shift + 矢印</span>
+                    <h3 class="shortcut-name">データ端まで選択</h3>
+                    <p class="shortcut-desc">今のセルからデータの終わりまでを、一気に範囲選択します。</p>
+                </div>
+                <!-- Select Region -->
+                <div class="shortcut-card accent-blue">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>A</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + A</span>
+                    <h3 class="shortcut-name">表全体を選択</h3>
+                    <p class="shortcut-desc">カーソルがある場所に関連する表の範囲をすべて選択します。</p>
+                </div>
+                <!-- Home -->
+                <div class="shortcut-card accent-blue">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>Home</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + Home</span>
+                    <h3 class="shortcut-name">先頭(A1)へ移動</h3>
+                    <p class="shortcut-desc">シートのどこにいても、一瞬で左上のA1セルへ戻ります。</p>
+                </div>
+                <!-- Search -->
+                <div class="shortcut-card accent-blue">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>F</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + F</span>
+                    <h3 class="shortcut-name">検索</h3>
+                    <p class="shortcut-desc">膨大なデータの中から、特定のキーワードを素早く探します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 入力・編集 -->
+        <section class="category-block">
+            <h2 class="category-title text-orange-700">
+                <i class="fa-solid fa-pen-nib"></i> 03. 入力・編集マジック
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cell Edit -->
+                <div class="shortcut-card accent-orange">
+                    <div class="kbd-container">
+                        <kbd>Enter</kbd>
+                    </div>
+                    <span class="kbd-win">Win: F2 または Enter</span>
+                    <h3 class="shortcut-name">セル内を編集</h3>
+                    <p class="shortcut-desc">マウスでダブルクリックせずに、セルの文字を書き換え始めます。</p>
+                </div>
+                <!-- Fill Down -->
+                <div class="shortcut-card accent-orange">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>D</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + D</span>
+                    <h3 class="shortcut-name">下方向にコピー</h3>
+                    <p class="shortcut-desc">上のセルの内容を、今のセル（または選択範囲）に複製します。</p>
+                </div>
+                <!-- Fill Right -->
+                <div class="shortcut-card accent-orange">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>R</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + R</span>
+                    <h3 class="shortcut-name">右方向にコピー</h3>
+                    <p class="shortcut-desc">左のセルの内容を、今のセルへ一瞬で複製します。</p>
+                </div>
+                <!-- Today Date -->
+                <div class="shortcut-card accent-orange">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>;</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + ;</span>
+                    <h3 class="shortcut-name">今日の日付を入力</h3>
+                    <p class="shortcut-desc">カレンダーを確認せずとも、一瞬で今日の日付を刻印します。</p>
+                </div>
+                <!-- Hyperlink -->
+                <div class="shortcut-card accent-orange">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>K</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + K</span>
+                    <h3 class="shortcut-name">リンクの挿入</h3>
+                    <p class="shortcut-desc">ウェブサイトのURLやシート内リンクをスマートに設定します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 行・列 -->
+        <section class="category-block">
+            <h2 class="category-title text-red-700">
+                <i class="fa-solid fa-table-columns"></i> 04. 行と列の自由自在な操作
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Select Column -->
+                <div class="shortcut-card accent-red">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>Space</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + Space</span>
+                    <h3 class="shortcut-name">列全体を選択</h3>
+                    <p class="shortcut-desc">今いる場所の「縦一列」をすべて選択状態にします。</p>
+                </div>
+                <!-- Select Row -->
+                <div class="shortcut-card accent-red">
+                    <div class="kbd-container">
+                        <kbd>Shift</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>Space</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Shift + Space</span>
+                    <h3 class="shortcut-name">行全体を選択</h3>
+                    <p class="shortcut-desc">今いる場所の「横一列」をすべて選択状態にします。</p>
+                </div>
+                <!-- Insert Row/Col -->
+                <div class="shortcut-card accent-red">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>Option</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>=</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + Alt + =</span>
+                    <h3 class="shortcut-name">行・列を挿入</h3>
+                    <p class="shortcut-desc">選択している場所に、新しく空白の行や列を割り込ませます。</p>
+                </div>
+                <!-- Delete Row/Col -->
+                <div class="shortcut-card accent-red">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>Option</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>-</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + Alt + -</span>
+                    <h3 class="shortcut-name">行・列を削除</h3>
+                    <p class="shortcut-desc">不要になった行や列を、跡形もなくスッキリ消去します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. シート・管理 -->
+        <section class="category-block">
+            <h2 class="category-title text-purple-700">
+                <i class="fa-solid fa-layer-group"></i> 05. シート管理とヘルプ
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Switch Sheet -->
+                <div class="shortcut-card accent-purple">
+                    <div class="kbd-container">
+                        <kbd>⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>Shift</kbd> <span class="text-gray-400 text-xs">+</span> <kbd>PgDn/Up</kbd>
+                    </div>
+                    <span class="kbd-win">Win: Ctrl + Shift + PgDn/Up</span>
+                    <h3 class="shortcut-name">シートの切り替え</h3>
+                    <p class="shortcut-desc">隣のタブへ移動します。マウスを使わず別シートへ移動できます。</p>
+                </div>
+                <!-- Help -->
+                <div class="shortcut-card bg-gray-900 text-white border-none">
+                    <div class="kbd-container">
+                        <kbd class="shadow-none border-none">⌘</kbd> <span class="text-gray-400 text-xs">+</span> <kbd class="shadow-none border-none">/</kbd>
+                    </div>
+                    <span class="text-xs text-gray-400 mt-1 block">Win: Ctrl + /</span>
+                    <h3 class="shortcut-name text-white">ショートカット一覧</h3>
+                    <p class="shortcut-desc text-gray-400">「何だっけ？」と思ったらこれ。全ての答えが画面に現れます。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="text-center text-gray-400 text-sm mt-10">
+            <p>© スプレッドシート初心者救済ガイド - 高品質・最速仕事術</p>
+        </div>
+    </div>
+
+</body>
+</html>
